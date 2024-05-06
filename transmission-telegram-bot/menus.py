@@ -69,11 +69,13 @@ def torrent_set_files(torrent_id: int, file_id: int, state: bool):
 
 def add_torrent_with_file(file: bytes) -> trans.Torrent:
     encoded_file = base64.b64encode(file).decode("utf-8")
-    return transClient.add_torrent(encoded_file, paused=True)
+    current = transClient.get_session().download_dir
+    return transClient.add_torrent(encoded_file, paused=False, download_dir=f"{current}/Extras")
 
 
 def add_torrent_with_magnet(url: str) -> trans.Torrent:
-    return transClient.add_torrent(url, paused=True)
+    current = transClient.get_session().download_dir
+    return transClient.add_torrent(url, paused=False, download_dir=f"{current}/Extras")
 
 
 def menu() -> str:
