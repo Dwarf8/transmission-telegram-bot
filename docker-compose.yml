@@ -1,8 +1,6 @@
 version: '3.7'
 services:
   transmission-telegram-bot:
-    image: 'ghcr.io/vovcharaa/transmission-telegram-bot:latest'
+    image: 'ghcr.io/Dwarf8/transmission-telegram-bot:latest'
     container_name: 'transmission-telegram-bot'
     restart: unless-stopped
-    env_file:
-     - bot.env
