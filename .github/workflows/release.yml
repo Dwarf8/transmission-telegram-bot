@@ -35,7 +35,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.CR_PAT }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and push
         uses: docker/build-push-action@v2.9.0
         with:
@@ -45,8 +45,8 @@ jobs:
           push: true
           pull: true
           tags: |
-            ghcr.io/Dwarf8/transmission-telegram-bot:latest
-            ghcr.io/Dwarf8/transmission-telegram-bot:${{ env.TAG }}
+            ghcr.io/dwarf8/transmission-telegram-bot:latest
+            ghcr.io/dwarf8/transmission-telegram-bot:${{ env.TAG }}
 
       - name: Install git-chglog
         run: |
