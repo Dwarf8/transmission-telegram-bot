@@ -45,8 +45,8 @@ jobs:
           push: true
           pull: true
           tags: |
-            ghcr.io/vovcharaa/transmission-telegram-bot:latest
-            ghcr.io/vovcharaa/transmission-telegram-bot:${{ env.TAG }}
+            ghcr.io/Dwarf8/transmission-telegram-bot:latest
+            ghcr.io/Dwarf8/transmission-telegram-bot:${{ env.TAG }}
 
       - name: Install git-chglog
         run: |
