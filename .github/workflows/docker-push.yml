@@ -33,4 +33,4 @@ jobs:
           push: true
           pull: true
           tags: |
-            ghcr.io/Dwarf8/transmission-telegram-bot:${{ github.sha }}
+            ghcr.io/dwarf8/transmission-telegram-bot:${{ github.sha }}
